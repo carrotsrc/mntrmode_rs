@@ -24,13 +24,17 @@ fn main() {
         return;
     }
 
+    //println!("Interface Index: {}", dev_index);
+    //^^^^
+    //This is weird -- putting macro here invalidates `family` below
+
     // allocate a new netlink socket
     let mut nls = rsnl::socket::alloc().unwrap();
     rsgnl::socket::connect(&mut nls);
     let family = rsgnl::controller::resolve(&nls, "nl80211");
 
+    //println!("Interface Index: {}", dev_index);
 
-    println!("Interface Index: {}", dev_index);
 
 
     //rsnl::socket::set_buffer_size(&mut nls, 4096, 4096);
