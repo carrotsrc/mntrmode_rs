@@ -1,0 +1,13 @@
+[package]
+name = "mntmode"
+version = "0.1.0"
+authors = ["Charlie FG <cfg@zunautica.org>"]
+
+[dependencies.rsnl]
+git = "https://github.com/carrotsrc/rsnl"
+
+[dependencies.rsgnl]
+git = "https://github.com/carrotsrc/rsgnl"
+
+[dependencies.nl80211rs]
+git = "https://github.com/carrotsrc/nl80211rs"

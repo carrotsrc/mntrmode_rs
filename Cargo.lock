@@ -1,0 +1,27 @@
+[root]
+name = "mntmode"
+version = "0.1.0"
+dependencies = [
+ "nl80211rs 0.1.0 (git+https://github.com/carrotsrc/nl80211rs)",
+ "rsgnl 0.1.0 (git+https://github.com/carrotsrc/rsgnl)",
+ "rsnl 0.0.2 (git+https://github.com/carrotsrc/rsnl)",
+]
+
+[[package]]
+name = "nl80211rs"
+version = "0.1.0"
+source = "git+https://github.com/carrotsrc/nl80211rs#edcc28cd42b456794996168b44814baec0c88c94"
+
+[[package]]
+name = "rsgnl"
+version = "0.1.0"
+source = "git+https://github.com/carrotsrc/rsgnl#8ae2392d438655841497159308effbfce4a42050"
+dependencies = [
+ "rsnl 0.0.2 (git+https://github.com/carrotsrc/rsnl)",
+]
+
+[[package]]
+name = "rsnl"
+version = "0.0.2"
+source = "git+https://github.com/carrotsrc/rsnl#170f8fee122676161c6fe165e3bfe8499faf982b"
+
