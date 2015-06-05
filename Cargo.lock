@@ -15,7 +15,7 @@ source = "git+https://github.com/carrotsrc/nl80211rs#edcc28cd42b456794996168b448
 [[package]]
 name = "rsgnl"
 version = "0.1.0"
-source = "git+https://github.com/carrotsrc/rsgnl#8ae2392d438655841497159308effbfce4a42050"
+source = "git+https://github.com/carrotsrc/rsgnl#161d26d9b4c2105f3a386fbc4287ed70af53f7c9"
 dependencies = [
  "rsnl 0.0.2 (git+https://github.com/carrotsrc/rsnl)",
 ]
@@ -23,5 +23,5 @@ dependencies = [
 [[package]]
 name = "rsnl"
 version = "0.0.2"
-source = "git+https://github.com/carrotsrc/rsnl#170f8fee122676161c6fe165e3bfe8499faf982b"
+source = "git+https://github.com/carrotsrc/rsnl#50986b00a1ea4bab6fdff42d6b68e8332e43b62a"
 

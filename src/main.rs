@@ -1,5 +1,7 @@
 extern crate rsnl;
 extern crate rsgnl;
+extern crate nl80211rs;
+
 use std::env::args;
 
 extern "C" { fn if_nametoindex(name: *const str) -> i32; }
@@ -10,7 +12,7 @@ fn main() {
         println!("Device unspecified");
         return;
     }
-
+ 
     // get the interface name
     let dev_str =  args().last().unwrap();
     let cs: &str = &dev_str;
@@ -23,8 +25,16 @@ fn main() {
     }
 
     // allocate a new netlink socket
-    let mut nls = rsnl::socket::alloc();
-    rsnl::socket::set_buffer_size(&mut nls, 4096, 4096);
+    let mut nls = rsnl::socket::alloc().unwrap();
+    rsgnl::socket::connect(&mut nls);
+    let family = rsgnl::controller::resolve(&nls, "nl80211");
+
+
+    println!("Interface Index: {}", dev_index);
+
+
+    //rsnl::socket::set_buffer_size(&mut nls, 4096, 4096);
+    println!("Family Index: {}", family);
 
     // connect the socket to generic netlink
     rsgnl::socket::connect(&mut nls);
