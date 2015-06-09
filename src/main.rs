@@ -5,8 +5,6 @@ extern crate nl80211rs;
 
 use std::env::args;
 
-type NlDataI32 = rsnl::message::NetlinkData<i32>;
-
 extern "C" { fn if_nametoindex(name: *const str) -> i32; }
 
 fn main() {
