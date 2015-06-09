@@ -54,6 +54,7 @@ fn main() {
     
 
     // Add netlink header -- message for setting values on a device
+    // Port 0 means we are directing the message to the kernel
     rsgnl::message::put(&mut msg, 0,0,family as i32,0,0,nl80211rs::Commands::SetInterface as u8,0);
 
     // get the interface type enum value for a monitor interface
