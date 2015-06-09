@@ -5,7 +5,7 @@ This demonstrates the use of rsnl and rsgnl.
 
 They are both interfaces (or bindings) to libnl and libnl-genl, enabling the use of libnl in rust to send netlink messages. Although far from complete, they have reached at least a point of sending messages, but not yet receiving.
 
-This very basic demonstration shows how to switch a wireless device onto monitor mode, set for capturing control frames. There is no user feedback so if the device does not support monitor mode then it won't tell you. You can check that the device was switched over with `iw [device_name] info` or `ifconfig`.
+This very basic demonstration shows how to switch a wireless device onto monitor mode, set for capturing control frames. There is no error out on the message so if the device does not support monitor mode then it won't tell you. You can check that the device was switched over with `iw [device_name] info` or `ifconfig`.
 
 #### Usage
 
